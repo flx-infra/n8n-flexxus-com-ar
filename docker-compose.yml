@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   n8n:
-    image: n8nio/n8n:stable
+    image: n8nio/n8n:1.112.5
     ports:
       - "5678:5678"
     networks:
