@@ -19,7 +19,13 @@ services:
       - DB_POSTGRESDB_PASSWORD=Flexxus2023**
       - NODE_FUNCTION_ALLOW_EXTERNAL=axios,qs
     restart: unless-stopped
-
+    deploy:
+      placement:
+    restart: unless-stopped
+    logging:
+      driver: loki
+      options:
+        loki-url: ${LOKI_URL} 
 networks:
   traefik:
     external:
