@@ -22,7 +22,6 @@ services:
     deploy:
       placement:
         constraints: ["${NODE}"]  
-    restart: unless-stopped
     logging:
       driver: loki
       options:
