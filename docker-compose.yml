@@ -18,8 +18,6 @@ services:
       - DB_POSTGRESDB_USER=flexxus
       - DB_POSTGRESDB_PASSWORD=Flexxus2023**
       - NODE_FUNCTION_ALLOW_EXTERNAL=axios,qs
-    depends_on:
-      - db
     restart: unless-stopped
 
 networks:
