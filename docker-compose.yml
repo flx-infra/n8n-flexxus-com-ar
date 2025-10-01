@@ -19,6 +19,13 @@ services:
       - DB_POSTGRESDB_USER=flexxus
       - DB_POSTGRESDB_PASSWORD=Flexxus2023**
       - NODE_FUNCTION_ALLOW_EXTERNAL=axios,qs
+      - N8N_EMAIL_MODE=smtp
+      - N8N_SMTP_HOST=smtp.gmail.com
+      - N8N_SMTP_PORT=465
+      - N8N_SMTP_USER=alezagalia@gmail.com
+      - N8N_SMTP_PASS=ypva dgqy tbcu ytxa
+      - N8N_SMTP_SENDER=alezagalia@gmail.com
+      - N8N_SMTP_SSL=true
     restart: unless-stopped
     deploy:
       placement:
