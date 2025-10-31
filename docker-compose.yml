@@ -26,6 +26,10 @@ services:
       - N8N_SMTP_PASS=ypva dgqy tbcu ytxa
       - N8N_SMTP_SENDER=alezagalia@gmail.com
       - N8N_SMTP_SSL=true
+      - WEBHOOK_URL=https://n8n.flexxus.com.ar/
+      - N8N_HOST=n8n.flexxus.com.ar
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=https 
     restart: unless-stopped
     deploy:
       placement:
