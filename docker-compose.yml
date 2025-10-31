@@ -30,6 +30,11 @@ services:
     deploy:
       placement:
         constraints: ["${NODE}"]  
+      labels:
+        - "traefik.enable=true"
+        - "traefik.http.routers.${SERVICE_NAME}.entrypoints=web"
+        - "traefik.http.routers.${SERVICE_NAME}.rule=Host(`${DOMAIN_NAME}`)"
+        - "traefik.http.services.${SERVICE_NAME}.loadbalancer.server.port=5678"        
     logging:
       driver: loki
       options:
